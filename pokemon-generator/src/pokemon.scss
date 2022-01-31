@@ -463,7 +463,7 @@
   // background-color: pink;
   height: 75px;
   display: grid;
-  grid-template-columns: 65px auto 65px;
+  grid-template-columns: 35px auto ;
   gap: 5px;
   align-items: center;
   justify-items: center;
@@ -476,7 +476,7 @@
   }
 
   .ability-description {
-    text-align: center;
+    text-align: left;
     .ability-name {
       font-weight: bold;
       height: 15px;

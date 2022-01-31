@@ -31,10 +31,10 @@ const PokemonCard = (props) => {
             <img alt="" className="element-icon" src={props.pokemon.icon}></img>
           </span>
           <span className="ability-description">
-            <span className="ability-name">{ability.name}</span>
-            
+            <span className="ability-name">{ability.name}: </span>
+            <span className="ability-damage">{ability.description}</span>
+
           </span>
-          {/* <span className="ability-damage">{ability.description}</span> */}
         </section>
       ))}
       <section className="character-stats">

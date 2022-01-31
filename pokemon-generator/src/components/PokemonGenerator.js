@@ -27,10 +27,6 @@ const PokemonGenerator = () => {
     const { data: description } = await axios.get(data.species.url);
 
     const  getAbilities = async (abilitiesObj) => {
-      //given an object with a name and a url
-      //i want to save the name, and get description from the URL
-      // i want to return an array of objects with name, description
-
       const result = await Promise.all(abilitiesObj.map(async (ability) => {
         const url = ability.ability.url;
         const { data } = await axios.get(url);
@@ -57,9 +53,6 @@ const PokemonGenerator = () => {
       shape: description.shape.name,
     });
 
-    // console.log(pokemon.abilities);
-    // console.log(data);
-    // console.log(description);
   };
 
   return (
