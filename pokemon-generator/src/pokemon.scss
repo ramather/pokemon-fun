@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-.about{
+.about {
   justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
@@ -58,433 +58,131 @@
 }
 
 .grass {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  height: 672px;
-  width: 450px;
-  border-radius: 15px;
-  display: grid;
-  overflow: hidden;
-  box-shadow: 20px 12px 20px 0px black;
-  border: 15px solid #e7c30d;
-  font-family: arial, sans-serif;
-  position: relative;
+  @extend .pokemon-card;
+
   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./background.jpg");
-    background-size: cover;
-    z-index: -1;
     filter: hue-rotate(231deg);
   }
 }
 
 .fighting {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  height: 672px;
-  width: 450px;
-  border-radius: 15px;
-  display: grid;
-  overflow: hidden;
-  box-shadow: 20px 12px 20px 0px black;
-  border: 15px solid #e7c30d;
-  font-family: arial, sans-serif;
-  position: relative;
+  @extend .pokemon-card;
+
   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./background.jpg");
-    background-size: cover;
-    z-index: -1;
     filter: hue-rotate(159deg);
   }
 }
 
 .rock {
-    
+  @extend .pokemon-card;
 
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    height: 672px;
-    width: 450px;
-    border-radius: 15px;
-    display: grid;
-    overflow: hidden;
-    box-shadow: 20px 12px 20px 0px black;
-    border: 15px solid #e7c30d;
-    font-family: arial, sans-serif;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("./background.jpg");
-      background-size: cover;
-      z-index: -1;
-      filter: hue-rotate(179deg);
-    }
+  &:before {
+    filter: hue-rotate(179deg);
   }
-  .ground {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    height: 672px;
-    width: 450px;
-    border-radius: 15px;
-    display: grid;
-    overflow: hidden;
-    box-shadow: 20px 12px 20px 0px black;
-    border: 15px solid #e7c30d;
-    font-family: arial, sans-serif;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("./background.jpg");
-      background-size: cover;
-      z-index: -1;
-      filter: hue-rotate(169deg);
-    }
-  }
+}
+.ground {
+  @extend .pokemon-card;
 
-  .bug {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    height: 672px;
-    width: 450px;
-    border-radius: 15px;
-    display: grid;
-    overflow: hidden;
-    box-shadow: 20px 12px 20px 0px black;
-    border: 15px solid #e7c30d;
-    font-family: arial, sans-serif;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("./background.jpg");
-      background-size: cover;
-      z-index: -1;
-      filter: hue-rotate(215deg);
-    }
+  &:before {
+    filter: hue-rotate(169deg);
   }
+}
+
+.bug {
+  @extend .pokemon-card;
+
+  &:before {
+    filter: hue-rotate(215deg);
+  }
+}
 
 .fire {
-  padding: 0;
-  box-sizing: border-box;
-  height: 672px;
-  width: 450px;
-  border-radius: 15px;
-  display: grid;
-  overflow: hidden;
-  box-shadow: 20px 12px 20px 0px black;
-  border: 15px solid #e7c30d;
-  font-family: arial, sans-serif;
-  position: relative;
+  @extend .pokemon-card;
+
   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./background.jpg");
-    background-size: cover;
-    z-index: -1;
     filter: hue-rotate(140deg);
   }
 }
 .electric {
-  padding: 0;
-  box-sizing: border-box;
-  height: 672px;
-  width: 450px;
-  border-radius: 15px;
-  display: grid;
-  overflow: hidden;
-  box-shadow: 20px 12px 20px 0px black;
-  border: 15px solid #e7c30d;
-  font-family: arial, sans-serif;
-  position: relative;
+  @extend .pokemon-card;
+
   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./background.jpg");
-    background-size: cover;
-    z-index: -1;
     filter: hue-rotate(190deg);
   }
 }
 .water {
-  padding: 0;
-  box-sizing: border-box;
-  height: 672px;
-  width: 450px;
-  border-radius: 15px;
-  display: grid;
-  overflow: hidden;
-  box-shadow: 20px 12px 20px 0px black;
-  border: 15px solid #e7c30d;
-  font-family: arial, sans-serif;
-  position: relative;
+  @extend .pokemon-card;
+
   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./background.jpg");
-    background-size: cover;
-    z-index: -1;
     filter: hue-rotate(10deg);
   }
 }
 
-.ice{
-    padding: 0;
-  box-sizing: border-box;
-  height: 672px;
-  width: 450px;
-  border-radius: 15px;
-  display: grid;
-  overflow: hidden;
-  box-shadow: 20px 12px 20px 0px black;
-  border: 15px solid #e7c30d;
-  font-family: arial, sans-serif;
-  position: relative;
+.ice {
+  @extend .pokemon-card;
   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./background.jpg");
-    background-size: cover;
-    z-index: -1;
-    opacity: .5;
+    opacity: 0.5;
     filter: hue-rotate(10deg);
   }
 }
 
 .normal {
-  padding: 0;
-  box-sizing: border-box;
-  height: 672px;
-  width: 450px;
-  border-radius: 15px;
-  display: grid;
-  overflow: hidden;
-  box-shadow: 20px 12px 20px 0px black;
-  border: 15px solid #e7c30d;
-  font-family: arial, sans-serif;
-  position: relative;
+  @extend .pokemon-card;
+
   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./background.jpg");
-    background-size: cover;
-    z-index: -1;
     filter: grayscale(1);
   }
 }
 
-
 .steel {
-    padding: 0;
-    box-sizing: border-box;
-    height: 672px;
-    width: 450px;
-    border-radius: 15px;
-    display: grid;
-    overflow: hidden;
-    box-shadow: 20px 12px 20px 0px black;
-    border: 15px solid #e7c30d;
-    font-family: arial, sans-serif;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("./background.jpg");
-      background-size: cover;
-      z-index: -1;
-      opacity: .5;
-      filter: grayscale(1);
-    }
+  @extend .pokemon-card;
+
+  &:before {
+    opacity: 0.5;
+    filter: grayscale(1);
   }
+}
 
 .ghost {
-    padding: 0;
-    box-sizing: border-box;
-    height: 672px;
-    width: 450px;
-    border-radius: 15px;
-    display: grid;
-    overflow: hidden;
-    box-shadow: 20px 12px 20px 0px black;
-    border: 15px solid #e7c30d;
-    font-family: arial, sans-serif;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("./background.jpg");
-      background-size: cover;
-      z-index: -1;
-      filter: hue-rotate(80deg);
-    }
+  @extend .pokemon-card;
+  &:before {
+    filter: hue-rotate(80deg);
   }
+}
 
-  .psychic {
-    padding: 0;
-    box-sizing: border-box;
-    height: 672px;
-    width: 450px;
-    border-radius: 15px;
-    display: grid;
-    overflow: hidden;
-    box-shadow: 20px 12px 20px 0px black;
-    border: 15px solid #e7c30d;
-    font-family: arial, sans-serif;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+.psychic {
+  @extend .pokemon-card;
 
-      background-image: url("./background.jpg");
-      background-size: cover;
-      z-index: -1;
-      filter: hue-rotate(51deg);
-    }
+  &:before {
+    filter: hue-rotate(55deg);
   }
+}
 
-  .poison {
-    padding: 0;
-    box-sizing: border-box;
-    height: 672px;
-    width: 450px;
-    border-radius: 15px;
-    display: grid;
-    overflow: hidden;
-    box-shadow: 20px 12px 20px 0px black;
-    border: 15px solid #e7c30d;
-    font-family: arial, sans-serif;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+.poison {
+  @extend .pokemon-card;
 
-      background-image: url("./background.jpg");
-      background-size: cover;
-      z-index: -1;
-      filter: hue-rotate(51deg);
-    }
+  &:before {
+    filter: hue-rotate(49deg);
   }
+}
 
-  
-  .dragon {
-    padding: 0;
-    box-sizing: border-box;
-    height: 672px;
-    width: 450px;
-    border-radius: 15px;
-    display: grid;
-    overflow: hidden;
-    box-shadow: 20px 12px 20px 0px black;
-    border: 15px solid #e7c30d;
-    font-family: arial, sans-serif;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+.dragon {
+  @extend .pokemon-card;
 
-      background-image: url("./background.jpg");
-      background-size: cover;
-      z-index: -1;
-      filter: hue-rotate(280deg);
-    }
+  &:before {
+    filter: hue-rotate(280deg);
   }
-  
+}
+
 .fairy {
-    padding: 0;
-    box-sizing: border-box;
-    height: 672px;
-    width: 450px;
-    border-radius: 15px;
-    display: grid;
-    overflow: hidden;
-    box-shadow: 20px 12px 20px 0px black;
-    border: 15px solid #e7c30d;
-    font-family: arial, sans-serif;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("./background.jpg");
-      background-size: cover;
-      z-index: -1;
-      opacity: .5;
+  @extend .pokemon-card;
 
-      filter: hue-rotate(80deg);
-    }
+  &:before {
+    opacity: 0.5;
+
+    filter: hue-rotate(80deg);
   }
+}
 
 .title-row {
   box-sizing: border-box;
@@ -573,7 +271,7 @@
   // background-color: pink;
   height: 75px;
   display: grid;
-  grid-template-columns: 35px auto ;
+  grid-template-columns: 35px auto;
   gap: 5px;
   align-items: center;
   justify-items: center;

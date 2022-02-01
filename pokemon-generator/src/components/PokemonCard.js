@@ -1,11 +1,12 @@
 import React from "react";
-import { useState } from "react/cjs/react.development";
 
 const PokemonCard = (props) => {
   // eslint-disable-next-line no-unused-vars
   function displayDescription(description) {
     if (description !== "") return <p>{description}</p>;
   }
+
+  
 
   return (
     <div className={props.pokemon.type}>
