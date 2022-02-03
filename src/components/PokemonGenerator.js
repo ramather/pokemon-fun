@@ -40,7 +40,7 @@ const PokemonGenerator = () => {
     };
 
     setPokemon({
-      name: pokemonName,
+      name: (pokemonName).toLowerCase(),
       species: data.species.name,
       img: data.sprites.front_default,
       hp: data.stats[0].base_stat,
