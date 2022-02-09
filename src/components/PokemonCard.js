@@ -1,14 +1,18 @@
-import React from "react";
+import React, {Suspense} from "react";
 
 const PokemonCard = (props) => {
   // eslint-disable-next-line no-unused-vars
-  function displayDescription(description) {
-    if (description !== "") return <p>{description}</p>;
-  }
+    const PokemonCard = React.lazy(() => import('./PokemonCard'))
 
   
 
+  if(props.pokemon.name === ""){
+    return <h1>Welcome!</h1>
+  }
+
   return (
+    
+
     <div className={props.pokemon.type}>
       <section className="title-row">
         <p className="rarity"></p>
@@ -52,7 +56,7 @@ const PokemonCard = (props) => {
         </span>{" "}
         <span className="character-stat">
           <p>retreat cost</p>
-          <img alt="" className="element-icon" src={props.pokemon.cost}></img>
+          <img alt="" className="element-icon" src={props.pokemon.icon}></img>
         </span>
       </section>
       <section className="character-description">

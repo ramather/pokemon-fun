@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import axios, { Axios } from "axios";
 import PokemonCard from "./PokemonCard";
 
@@ -40,7 +40,7 @@ const PokemonGenerator = () => {
     };
 
     setPokemon({
-      name: (pokemonName).toLowerCase(),
+      name: pokemonName,
       species: data.species.name,
       img: data.sprites.front_default,
       hp: data.stats[0].base_stat,
@@ -61,7 +61,7 @@ const PokemonGenerator = () => {
       <input
         type="text"
         onChange={(event) => {
-          setPokemonName(event.target.value);
+          setPokemonName(event.target.value.toLowerCase());
         }}
       ></input>
       <button onClick={getPokemon}>Search</button>
