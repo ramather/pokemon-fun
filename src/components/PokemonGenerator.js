@@ -1,7 +1,6 @@
 import React, { useState, Suspense, useEffect } from "react";
 import axios, { Axios } from "axios";
 import PokemonCard from "./PokemonCard";
-import Button from '@material-ui/core/Button';
 
 
 const PokemonGenerator = () => {
