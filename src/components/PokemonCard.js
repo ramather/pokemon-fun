@@ -39,19 +39,17 @@ const PokemonCard = (props) => {
       ))}
       <section className="character-stats">
         <span className="character-stat">
-          <p>weakness</p>
-          <img
-            alt=""
-            className="element-icon"
-            src={props.pokemon.weakness}
-          ></img>
+          <p>Attack</p>
+          <p>{props.pokemon.attack}</p>
         </span>
         <span className="character-stat">
-          <p>resistence</p>
+          <p>Defense</p>
+          <p>{props.pokemon.defense}</p>
+
         </span>{" "}
         <span className="character-stat">
-          <p>retreat cost</p>
-          <img alt="" className="element-icon" src={props.pokemon.icon}></img>
+          <p>Speed</p>
+          <p>{props.pokemon.speed}</p>
         </span>
       </section>
       <section className="character-description">

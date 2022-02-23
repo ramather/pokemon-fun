@@ -58,6 +58,8 @@ const PokemonGenerator = () => {
       weight: data.weight,
       description: description.flavor_text_entries[0].flavor_text,
       shape: description.shape.name,
+      defense: data.stats[2].base_stat,
+      speed: data.stats[5].base_stat,
     });
     setIsLoaded(true);
   };
