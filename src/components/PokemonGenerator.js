@@ -33,9 +33,9 @@ const PokemonGenerator = () => {
       
       `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
     ).catch(function (error) {
-      setIsError(true)
+      // setIsError(true)
       console.log(error.toJSON());
-      // setIsLoaded(true);
+      setIsLoaded(true);
 
     });
     setIsError(false)
