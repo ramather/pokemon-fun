@@ -6,6 +6,7 @@ import PokemonCard from "./PokemonCard";
 const PokemonGenerator = () => {
   const [pokemonName, setPokemonName] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isError, setIsError] = useState(false)
 
 
   const [pokemon, setPokemon] = useState({
@@ -27,9 +28,18 @@ const PokemonGenerator = () => {
 
   const getPokemon = async () => {
     setIsLoaded(false);
+
     const { data } = await axios.get(
+      
       `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
-    );
+    ).catch(function (error) {
+      setIsError(true)
+      console.log(error.toJSON());
+      // setIsLoaded(true);
+
+    });
+    setIsError(false)
+    
     const { data: description } = await axios.get(data.species.url);
 
     const getAbilities = async (abilitiesObj) => {
@@ -77,6 +87,7 @@ const PokemonGenerator = () => {
       ></input>
       <button  variant="outlined" onClick={getPokemon}>Search</button>
       </label>
+     
       {pokemon.name && (
         <div className="about">
           {isLoaded ? <PokemonCard pokemon={pokemon} /> : <div>loading</div>}
