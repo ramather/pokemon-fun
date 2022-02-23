@@ -1,9 +1,13 @@
-import React, { useState, Suspense } from "react";
+import React, { useState, Suspense, useEffect } from "react";
 import axios, { Axios } from "axios";
 import PokemonCard from "./PokemonCard";
+import Button from '@material-ui/core/Button';
+
 
 const PokemonGenerator = () => {
   const [pokemonName, setPokemonName] = useState("");
+  const [isLoaded, setIsLoaded] = useState(false);
+
 
   const [pokemon, setPokemon] = useState({
     name: "",
@@ -20,22 +24,26 @@ const PokemonGenerator = () => {
     abilities: [],
   });
 
+ 
+
   const getPokemon = async () => {
+    setIsLoaded(false);
     const { data } = await axios.get(
       `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
     );
     const { data: description } = await axios.get(data.species.url);
 
-    const  getAbilities = async (abilitiesObj) => {
-      const result = await Promise.all(abilitiesObj.map(async (ability) => {
-        const url = ability.ability.url;
-        const { data } = await axios.get(url);
-        return {
-          name: ability.ability.name,
-          description: data.effect_entries[1].short_effect,
-        };
-      }));
-      console.log(result)
+    const getAbilities = async (abilitiesObj) => {
+      const result = await Promise.all(
+        abilitiesObj.map(async (ability) => {
+          const url = ability.ability.url;
+          const { data } = await axios.get(url);
+          return {
+            name: ability.ability.name,
+            description: data.effect_entries[1].short_effect,
+          };
+        })
+      );
       return result;
     };
 
@@ -52,23 +60,27 @@ const PokemonGenerator = () => {
       description: description.flavor_text_entries[0].flavor_text,
       shape: description.shape.name,
     });
-
+    setIsLoaded(true);
   };
+
 
   return (
     <div>
-      <h1>Create your own pokemon card</h1>
+
+      <label>
       <input
         type="text"
         onChange={(event) => {
           setPokemonName(event.target.value.toLowerCase());
         }}
       ></input>
-      <button onClick={getPokemon}>Search</button>
-
-      <div className="about">
-        <PokemonCard pokemon={pokemon} />
-      </div>
+      <button  variant="outlined" onClick={getPokemon}>Search</button>
+      </label>
+      {pokemon.name && (
+        <div className="about">
+          {isLoaded ? <PokemonCard pokemon={pokemon} /> : <div>loading</div>}
+        </div>
+      )}
     </div>
   );
 };

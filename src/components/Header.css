@@ -1,0 +1,53 @@
+.Header {
+    display: grid;
+    grid-template-areas: "logo nav nav nav nav";
+    background-color: purple;
+    /* color: purple; */
+    
+
+}
+
+
+/* CSS */
+
+
+
+
+button:hover {
+  background-color: #2c974b;
+}
+
+
+button{
+    border: 1px solid rgba(27, 31, 35, .15);
+    font-weight: 600;
+    margin-top: 2px;
+    height: 28px;
+    background: #2ccd78;
+    padding: 0 15px;
+    letter-spacing: 1.2px;
+    color: white;
+}
+input{
+    height: 30px;
+    /* border: 1px solid rgba(27, 31, 35, .15); */
+
+}
+
+a { 
+    text-decoration: none; 
+    color: white; 
+   }
+
+.Nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    justify-items: left;
+}
+
+.Logo {
+    height: 50px;
+    margin: 10px;
+}

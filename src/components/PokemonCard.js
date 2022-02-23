@@ -1,14 +1,9 @@
-import React, {Suspense} from "react";
+import React from "react";
+
 
 const PokemonCard = (props) => {
   // eslint-disable-next-line no-unused-vars
-    const PokemonCard = React.lazy(() => import('./PokemonCard'))
 
-  
-
-  if(props.pokemon.name === ""){
-    return <h1>Welcome!</h1>
-  }
 
   return (
     
