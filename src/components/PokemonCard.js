@@ -3,8 +3,8 @@ import React from "react";
 
 const PokemonCard = (props) => {
   // eslint-disable-next-line no-unused-vars
-
-
+  if(props.isError) return <h3>No such pokemon :(</h3>
+  console.log(props.isError)
   return (
     
 

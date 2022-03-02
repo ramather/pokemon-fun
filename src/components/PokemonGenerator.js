@@ -28,14 +28,22 @@ const PokemonGenerator = () => {
 
   const getPokemon = async () => {
     setIsLoaded(false);
-
+    if(pokemonName === ''){
+      return alert('cannot be blank')
+    }
+   
     const { data } = await axios.get(
       
       `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
     ).catch(function (error) {
-      // setIsError(true)
+      console.log('caught')
       console.log(error.toJSON());
       setIsLoaded(true);
+      setIsError(true);
+      console.log(isError)
+      return alert(error)
+
+
 
     });
     setIsError(false)
@@ -80,6 +88,7 @@ const PokemonGenerator = () => {
 
       <label>
       <input
+        
         type="text"
         onChange={(event) => {
           setPokemonName(event.target.value.toLowerCase());
@@ -90,11 +99,15 @@ const PokemonGenerator = () => {
      
       {pokemon.name && (
         <div className="about">
-          {isLoaded ? <PokemonCard pokemon={pokemon} /> : <div>loading</div>}
+        
+          {isLoaded ? <PokemonCard pokemon={pokemon} isError={isError} /> : <div>loading</div>}
+
         </div>
       )}
     </div>
   );
 };
+
+
 
 export default PokemonGenerator;
