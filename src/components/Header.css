@@ -1,8 +1,8 @@
 .Header {
     display: grid;
-    grid-template-areas: "logo nav nav nav nav";
+    grid-template-areas: "logo nav nav nav nav nav nav nav nav";
     background-color: purple;
-    /* color: purple; */
+    
     
 
 }
@@ -30,13 +30,13 @@ button{
 }
 input{
     height: 30px;
-    /* border: 1px solid rgba(27, 31, 35, .15); */
 
 }
 
 a { 
     text-decoration: none; 
     color: white; 
+    padding-right: 30px;
    }
 
 .Nav {
@@ -45,6 +45,12 @@ a {
     grid-template-columns: repeat(4, auto);
     align-items: center;
     justify-items: left;
+    justify-self: start;
+    
+    
+
+    
+    
 }
 
 .Logo {

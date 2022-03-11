@@ -29,6 +29,10 @@ const PokemonGenerator = () => {
   const getPokemon = async () => {
     setIsLoaded(false);
     if(pokemonName === ''){
+      setIsLoaded(true);
+
+      setIsLoaded(true);
+
       return alert('cannot be blank')
     }
    
